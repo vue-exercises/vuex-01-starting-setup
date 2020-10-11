@@ -1,21 +1,24 @@
 <template>
-  <button @click="addTwo">Add 2</button>
-  <button @click="addTen">Add 10</button>
+  <button @click="increment">Add 2</button>
+  <button @click="increase({ value: 10 })">Add 10</button>
 </template>
 
 <script>
+import { mapActions } from 'vuex';
+
 export default {
   methods: {
-    addTwo() {
-      this.$store.dispatch('increment');
-    },
+    // addTwo() {
+    //   this.$store.dispatch('increment');
+    // },
 
-    addTen() {
-      this.$store.dispatch({
-        type: 'increase',
-        value: 10
-      });
-    }
+    // addTen() {
+    //   this.$store.dispatch({
+    //     type: 'increase',
+    //     value: 10
+    //   });
+    // }
+    ...mapActions(['increment', 'increase'])
   }
 };
 </script>
