@@ -8,17 +8,7 @@ import { mapActions } from 'vuex';
 
 export default {
   methods: {
-    // addTwo() {
-    //   this.$store.dispatch('increment');
-    // },
-
-    // addTen() {
-    //   this.$store.dispatch({
-    //     type: 'increase',
-    //     value: 10
-    //   });
-    // }
-    ...mapActions({
+    ...mapActions('numbers', {
       inc: 'increment',
       increase: 'increase'
     })
