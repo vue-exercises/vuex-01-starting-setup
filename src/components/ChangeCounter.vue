@@ -1,5 +1,5 @@
 <template>
-  <button @click="increment">Add 2</button>
+  <button @click="inc">Add 2</button>
   <button @click="increase({ value: 10 })">Add 10</button>
 </template>
 
@@ -18,7 +18,10 @@ export default {
     //     value: 10
     //   });
     // }
-    ...mapActions(['increment', 'increase'])
+    ...mapActions({
+      inc: 'increment',
+      increase: 'increase'
+    })
   }
 };
 </script>
