@@ -7,12 +7,11 @@
 export default {
   methods: {
     addTwo() {
-      this.$store.commit('increment');
+      this.$store.dispatch('increment');
     },
 
     addTen() {
-      // this.$store.commit('increase', { value: 10 });
-      this.$store.commit({
+      this.$store.dispatch({
         type: 'increase',
         value: 10
       });
